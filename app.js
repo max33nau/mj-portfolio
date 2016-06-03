@@ -2,16 +2,17 @@ function getId(id) {
   return document.getElementById(id);
 }
 
-function MyChart(canvas, myData, type, myLabels, myColors,myHoverColors) {
+function MyChart(canvas, myData, type, myLabels, myColors,myMainLabel) {
   this.canvas = canvas;
   this.type = type;
+  this.label = myMainLabel || '';
   this.mainData = {
     labels: myLabels,
     datasets: [
         {
+            label: this.label,
             data: myData,
-            backgroundColor: myColors,
-            hoverBackgroundColor: myHoverColors
+            backgroundColor: myColors
         }]
       };
 }
@@ -66,7 +67,7 @@ var javaScriptChart = new MyChart(getId('additionalJavaScriptChart'), [10,10,70,
     "blue",
     "black",
     "pink"
-])
+], 'Additional Skills')
 
 generalChart.createChart();
 meanStackChart.createChart();
