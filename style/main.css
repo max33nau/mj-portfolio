@@ -89,6 +89,32 @@
 
 /******** END OF TECHNICAL SKILLS ********/
 
+/******** PROJECT SKILLS ********/
+
+.project-img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  margin: 5px;
+  display: inline-block !important;
+}
+
+.activeProject {
+  box-shadow: 5px 5px 10px rgba(131, 41, 49, 1);
+}
+
+#projectImgContainer {
+  margin-top: 50px;
+}
+
+.project-img-main {
+  display: block;
+  margin-left: 10px;
+  max-width: 500px;
+}
+
+/******** END OF PROJECT SKILLS ********/
+
 /******** MAIN COLORS ********/
 /* Retrieved from my custom Color palette generator that I built called color fish (https://team-malex.2016.angularattack.io/#/color-fish) */
 .gondola-background { /* dark purple color */

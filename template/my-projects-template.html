@@ -1,0 +1,31 @@
+<div id='projects' class='main-container'>
+  <h2 class='crown-of-thorns-color'> Projects </h2>
+  <div class="pure-g">
+    <div class="pure-u-1" ng-repeat='project in my.projects'>
+      <div class="pure-g" ng-show='showProject == project.name'>
+        <div class="pure-u-16-24">
+          <h3> {{project.name}} </h3>
+          <ul>
+            <li> Date Built: {{project.dateBuilt}} </li>
+            <li> Live Site: <a href='{{project.liveSiteUrl}}' target='_blank'>{{project.liveSiteUrl}}</a> </li>
+            <li>Github: <a href='{{project.gitHubUrl}}' target='_blank'>{{project.gitHub}}</a>   </li>
+          </ul>
+          <p> {{project.description}} </p>
+        </div>
+        <div class="pure-u-8-24 justify-content">
+          <img class='project-img-main' src={{project.imageSrc}}></img>
+        </div>
+      </div>
+    </div>
+    <div class='pure-u-1 justify-content' id='projectImgContainer' >
+      <img src='{{image.imageSrc}}' class='project-img' ng-repeat='image in my.projects' ng-click='changeProject(image.name)'  ng-class='{activeProject: showProject == image.name}'/>
+    </div>
+    <!-- <div class='pure-u-1 justify-content' id='projectImgContainer'>
+      <img src='img/projects-img/angling-for-angular-project.png' class='project-img'/>
+      <img src='img/projects-img/color-fish-project.jpg' class='project-img'/>
+      <img src='img/projects-img/relax-and-color-project.jpg' class='project-img'/>
+      <img src='img/projects-img/settlers-of-candyland-project.jpg' class='project-img'/>
+    </div> -->
+  </div>
+
+  </div>
