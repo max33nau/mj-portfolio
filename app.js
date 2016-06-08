@@ -155,3 +155,43 @@ app.directive('myProjects', function(){
     }]
   };
 });
+
+app.directive('workExperience', function(){
+  return {
+    restrict: 'E',
+    templateUrl: 'template/work-experience-template.html',
+    link: function(scope, element,attr) {
+      scope.work = {};
+      scope.work.experience = [
+        {
+          title: 'Front End Developer',
+          company: 'Eleven Wireless',
+          location: 'Portland, OR',
+          date: 'June 2016 - Present',
+          responsibilities: ['Write maintainable and well thought out code.', 'Follow Agile development tactics with daily scrum meetings.', 'Perform front-end fundamentals (CSS/HTML), including responsive design and cross browser compatibility.', 'Develope with the knowledge of JavaScript proficiency including jQuery and front-end frameworks such as AngularJS.']
+        },
+        {
+          title: 'Teacher Assistant',
+          company: 'Code Fellows',
+          location: 'Portland, OR',
+          date: 'April 2016 - May 2016',
+          responsibilities: ['Provide technical assistance to students and help them throughout coding courses with HTML, CSS and JavaScript (mainly jQuery and vanilla JavaScript).', 'Graded coding assignments, which involves a lot of debugging and close attention to detail.']
+        },
+        {
+          title: 'Area Director',
+          company: 'Skyhawks Youth Sports Camps',
+          location: 'OR & WA regional areas',
+          date: 'June 2015 - September 2015',
+          responsibilities: ['Promoted to director after working as a coach for six weeks.', 'Graded coding assignments, which involves a lot of debugging and close attention to detail.', 'Directed operations for 50+ youth sports camps, which included over 750 children.']
+        },
+        {
+          title: 'Professional Overseas Basketball Player',
+          company: 'Sampaense Basket Club',
+          location: 'Portugal',
+          date: 'September 2014 - May 2015',
+          responsibilities: ['Starting power forward for Portuguese D-1 basketball team', 'Named to First Team All-League Rookie Team for 2014-2015 season.']
+        }
+      ];
+    }
+  };
+});
